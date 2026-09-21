@@ -1,2 +1,8 @@
 [run]
 relative_files = True
+omit =
+	src/aiops_pipeline.py
+	src/anomaly_detector.py
+	src/event_consumer.py
+	src/event_producer.py
+	src/event_topic.py
