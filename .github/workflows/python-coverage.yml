@@ -34,7 +34,7 @@ jobs:
       - name: Run tests with coverage
         run: |
           PYTHONPATH=. coverage run --source=src -m pytest -v
-          coverage report -m --fail-under=50
+          coverage report -m --fail-under=90
           coverage xml
 
       - name: Publish coverage to pull request
