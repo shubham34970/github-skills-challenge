@@ -29,13 +29,12 @@ jobs:
 
       - name: Install coverage tools
         run: |
-          pip install pytest coverage
+          pip install pytest coverage pytest-cov
 
       - name: Run tests with coverage
         run: |
-          PYTHONPATH=. coverage run --source=src -m pytest -v
+          PYTHONPATH=. pytest --cov=src --cov-report=xml -v
           coverage report -m --fail-under=90
-          coverage xml
 
       - name: Publish coverage to pull request
         uses: orgoro/coverage@v3
