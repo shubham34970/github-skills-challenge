@@ -29,7 +29,7 @@ jobs:
 
       - name: Install coverage tools
         run: |
-          pip install coverage
+          pip install pytest coverage
 
       - name: Run tests with coverage
         run: |
